@@ -8,8 +8,8 @@
 void Paddle::Draw() {
     int Width = 10;
     int Lenght = 20;
-    int PosX;
-    int PosY;
+    int PosX = 10;
+    int PosY = 20;
     Color PaddleColor = Color{255, 127, 0, 255};
     DrawRectangle(Width, Lenght, PosX, PosY, PaddleColor);
 }
@@ -17,7 +17,7 @@ void Paddle::Draw() {
 
 
 int main(void){
-    Color BackgroundColor = {255, 255, 255, 255};
+    Color BackgroundColor = {0, 0, 0, 255};
 
     const int ScreenWidth = 400;
     const int ScreenHeight = 300;
