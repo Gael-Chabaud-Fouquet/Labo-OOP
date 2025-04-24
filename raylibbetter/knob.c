@@ -92,7 +92,7 @@ bool build_game(void)
     build_raylib(&cmd);
     knob_cmd_append(&cmd,knob_temp_sprintf("./src/%s.cpp",LAB_NAME),"-o","./Deployment/game.exe");
     knob_cmd_append(&cmd, "-lkernel32","-lwinmm", "-lgdi32","-lopengl32");
-    knob_cmd_append(&cmd,"./src/main.cpp");
+    knob_cmd_append(&cmd,"./src/Breakout.cpp");
     if (!knob_cmd_run_sync(cmd)) knob_return_defer(false);
     
 defer:
