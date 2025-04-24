@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 /*done*/ void exercise1() {
@@ -92,9 +91,21 @@ using namespace std;
 	cout << "Exercise 5" << endl;
 	cout << "nothing here but silence (for now)\n\n" << endl;
 }
-/*not done*/ void exercise6() {
+/*done*/ void exercise6() {
 	cout << "Exercise 6" << endl;
-	cout << "nothing here but silence (for now)\n\n" << endl;
+	int BackupOfOriginalNumber;
+	float NumberToCheckIfPowerOfTwo;
+	cout << "Enter a number: "; cin >> NumberToCheckIfPowerOfTwo;
+	BackupOfOriginalNumber = NumberToCheckIfPowerOfTwo;
+	while (NumberToCheckIfPowerOfTwo > 1) {
+		NumberToCheckIfPowerOfTwo = NumberToCheckIfPowerOfTwo / 2;
+	}
+	if (NumberToCheckIfPowerOfTwo == 1) {
+		cout << BackupOfOriginalNumber << " is a power of 2\n\n" << endl;
+	}
+	else if (NumberToCheckIfPowerOfTwo < 1) {
+		cout << BackupOfOriginalNumber << " is not a power of 2\n\n" << endl;
+	}
 }
 /*done*/ void exercise7() {
 	cout << "Exercise 7" << endl;
@@ -120,7 +131,7 @@ using namespace std;
 	cout << "  *\n\n" << endl;
 }
 /*done*/ void exercise9() {
-	//explanaitions to understand how to do this: https://www.youtube.com/watch?v=cM4KP3hnCI4
+	//explanaitions to understand how to do this (I just used the part where it was explained in writing in yellowish orange on the screen): https://www.youtube.com/watch?v=cM4KP3hnCI4
 	cout << "Exercise 9" << endl; //Info: le labo demandait un nombre entre 0 et 999, mais mon programme fonctionne aussi avec des nombres plus grands que 999
 	int TheNumberInQuestion;
 	int Divider = 10;
@@ -143,48 +154,47 @@ using namespace std;
 	cout << "nothing here but silence (for now)\n\n" << endl;
 }
 
-
 int main(int argc, char** argv) {
-	int OptionToDoAkaTheExecriceOfThisLab;
-	cout << "Les options 1 a 10 sont les exercices du labo. Il y a une option 11 qui sert a fermer le labo.\n Entrez votre choix: "; cin >> OptionToDoAkaTheExecriceOfThisLab;
-	while (OptionToDoAkaTheExecriceOfThisLab != 11) {
-	/*exercise 1*/	if (OptionToDoAkaTheExecriceOfThisLab == 1) {
+	int OptionToDoAkaTheExerciceOfThisLab;
+	cout << "Les options 1 a 10 sont les exercices du labo. Il y a une option 11 qui sert a fermer le labo.\nEntrez votre choix: "; cin >> OptionToDoAkaTheExerciceOfThisLab;
+	while (OptionToDoAkaTheExerciceOfThisLab != 11) {
+	/*exercise 1*/	if (OptionToDoAkaTheExerciceOfThisLab == 1) {
 			exercise1();
 		}
-	/*exercise 2*/	if (OptionToDoAkaTheExecriceOfThisLab == 2) {
+	/*exercise 2*/	if (OptionToDoAkaTheExerciceOfThisLab == 2) {
 			exercise2();
 		}
-	/*exercise 3*/	if (OptionToDoAkaTheExecriceOfThisLab == 3) {
+	/*exercise 3*/	if (OptionToDoAkaTheExerciceOfThisLab == 3) {
 			exercise3();
 		}
-	/*exercise 4*/	if (OptionToDoAkaTheExecriceOfThisLab == 4) {
+	/*exercise 4*/	if (OptionToDoAkaTheExerciceOfThisLab == 4) {
 			exercise4();
 		}
-	/*exercise 5*/	if (OptionToDoAkaTheExecriceOfThisLab == 5) {
+	/*exercise 5*/	if (OptionToDoAkaTheExerciceOfThisLab == 5) {
 			exercise5();
 		}
-	/*exercise 6*/	if (OptionToDoAkaTheExecriceOfThisLab == 6) {
+	/*exercise 6*/	if (OptionToDoAkaTheExerciceOfThisLab == 6) {
 			exercise6();
 		}
-	/*exercise 7*/	if (OptionToDoAkaTheExecriceOfThisLab == 7) {
+	/*exercise 7*/	if (OptionToDoAkaTheExerciceOfThisLab == 7) {
 			exercise7();
 		}
-	/*exercise 8*/	if (OptionToDoAkaTheExecriceOfThisLab == 8) {
+	/*exercise 8*/	if (OptionToDoAkaTheExerciceOfThisLab == 8) {
 			exercise8();
 		}
-	/*exercise 9*/	if (OptionToDoAkaTheExecriceOfThisLab == 9) {
+	/*exercise 9*/	if (OptionToDoAkaTheExerciceOfThisLab == 9) {
 			exercise9();
 		}
-	/*exercise 10*/	if (OptionToDoAkaTheExecriceOfThisLab == 10) {
+	/*exercise 10*/	if (OptionToDoAkaTheExerciceOfThisLab == 10) {
 			exercise10();
 		}
-	/*quit*/	if (OptionToDoAkaTheExecriceOfThisLab == 11) {
+	/*quit*/	if (OptionToDoAkaTheExerciceOfThisLab == 11) {
 			cout << "Alright, closing programm" << endl;
 			return 0;
 		}
-	/*Default, unknown option*/	if (OptionToDoAkaTheExecriceOfThisLab < 1 || OptionToDoAkaTheExecriceOfThisLab > 11) {
+	/*Default, unknown option*/	if (OptionToDoAkaTheExerciceOfThisLab < 1 || OptionToDoAkaTheExerciceOfThisLab > 11) {
 			cout << "This is not the option you're looking for\n\n" << endl;
 		}
-		cout << "Next option: "; cin >> OptionToDoAkaTheExecriceOfThisLab;
+		cout << "Next option: "; cin >> OptionToDoAkaTheExerciceOfThisLab;
 	}
 }
