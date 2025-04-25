@@ -7,12 +7,13 @@ class Paddle
     int PosX;
     int PosY;
     int Lenght;
-    int Height;
+    int Width;
 
     public:
-    Paddle(int Height, int Lenght, int PosX, int PosY);
+    //Paddle(int Height, int Lenght, int PosX, int PosY);
     void Draw();
-    void SetPositionPaddle(int PosX, int PosY);
+    void SetSize(int Width, int Lenght);
+    void MovePaddle(int PosX);
 };
 
 class Ball
@@ -24,7 +25,7 @@ class Ball
     int Height;
 
     public:
-    Ball(int Height, int Lenght, int PosX, int PosY);
+    //Ball(int Height, int Lenght, int PosX, int PosY);
     void Draw();
     void SetPositionBall();
 };
@@ -39,8 +40,8 @@ class Brick
     bool IsAlive;
 
     public:
-    Brick(int Height, int Lenght, int PosX, int PosY, bool IsAlive);
-    ~Brick();
+    //Brick(int Height, int Lenght, int PosX, int PosY, bool IsAlive);
+    //~Brick();
     void Draw();
     void CheckIfAlive(bool IsAlive);
 };
