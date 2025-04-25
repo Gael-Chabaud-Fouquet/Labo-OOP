@@ -12,8 +12,7 @@ class Paddle
     public:
     //Paddle(int Height, int Lenght, int PosX, int PosY);
     void Draw();
-    void SetSize(int Width, int Lenght);
-    void MovePaddle(int PosX);
+    void MovePaddle();
 };
 
 class Ball
@@ -25,9 +24,8 @@ class Ball
     int Height;
 
     public:
-    //Ball(int Height, int Lenght, int PosX, int PosY);
     void Draw();
-    void SetPositionBall();
+    void MoveBall();
 };
 
 class Brick
@@ -40,8 +38,11 @@ class Brick
     bool IsAlive;
 
     public:
-    //Brick(int Height, int Lenght, int PosX, int PosY, bool IsAlive);
-    //~Brick();
+    // Brick(int PosX, int PosY, bool IsAlive);
+    // ~Brick();
     void Draw();
     void CheckIfAlive(bool IsAlive);
 };
+
+// class GameObject {
+// }

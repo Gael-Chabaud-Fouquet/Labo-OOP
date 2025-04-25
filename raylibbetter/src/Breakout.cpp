@@ -2,18 +2,7 @@
 #include <raylib.h>
 
 // my color guide: https://c20.reclaimers.net/h1/engine/hard-coded-data/
-
-
-
-// void Paddle::SetPositionPaddle(int PosX, int PosY){
-//     PosX = 10;
-//     PosY = 20;
-// };
-// void Paddle::SetSize(int Width, int Lenght){
-//     Width = 10;
-//     Lenght = 20;
-// };
-
+//je m'arrete a "Multiplayer armor colors"
 
 Ball ball;
 Paddle paddle;
@@ -22,10 +11,31 @@ Brick brick;
 void Paddle::Draw() {
     int Width = 40;
     int Height = 10;
-    int PosX = 180;
     int PosY = 270;
     Color PaddleColor = Color{255, 127, 0, 255};
     DrawRectangle(PosX, PosY, Width, Height, PaddleColor);
+    
+}
+
+void Paddle::MovePaddle() {
+    int Velocity = 10;
+    int Width = 40;
+    int Height = 10;
+    int PosY = 270;
+    Color PaddleColor = Color{255, 127, 0, 255};
+    if (IsKeyDown(KEY_A) || IsKeyDown(KEY_LEFT)) {
+        PosX -= Velocity;
+        if (PosX < 0) {
+            PosX = 0;
+        }
+    }
+    if (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT)) {
+        PosX += Velocity;
+        if (PosX > 360) {
+            PosX = 360;
+        }
+    }
+
 }
 
 void Ball::Draw() {
@@ -37,6 +47,15 @@ void Ball::Draw() {
     DrawRectangle(PosX, PosY, Width, Height, BallColor);
 }
 
+// void Ball::MoveBall(){
+//}
+
+// Brick::Brick(int PosX, int PosY, bool IsAlive){
+//     PosX += 50;
+//     PosY += 30;
+//     IsAlive = true;
+// }
+
 void Brick::Draw() {
     int Width = 40;
     int Height = 20;
@@ -45,12 +64,6 @@ void Brick::Draw() {
     Color BrickColor = Color{112, 126, 113, 255};
     DrawRectangle(PosX, PosY, Width, Height, BrickColor);
 }
-
-// void Paddle::MovePaddle(int PosX){
-//     int PosX = PosX;
-//     GetKeyPressed();
-// }
-
 
 int main(void){
     Color BackgroundColor = {255, 255, 255, 255};
@@ -61,8 +74,8 @@ int main(void){
 
     InitWindow(ScreenWidth, ScreenHeight, "Breakout");
     SetTargetFPS(FrameRate);
-
     while (!WindowShouldClose()) {
+        paddle.MovePaddle();
         BeginDrawing();
         paddle.Draw();
         ball.Draw();

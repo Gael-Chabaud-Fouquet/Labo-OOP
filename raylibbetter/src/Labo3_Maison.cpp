@@ -14,7 +14,7 @@ Walkway walkway;
 Door door;
 
 
-void Roof::Draw() { //bon bah toit rectangle
+void Roof::Draw() { //bon bah toit rectangle, flemme de chercher les vecteurs pour un triangle
     int Width = 250;
     int Height = 10;
     int PosX = 160;
