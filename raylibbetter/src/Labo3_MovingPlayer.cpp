@@ -45,7 +45,7 @@ int main(void){
     
     const int ScreenWidth = 400;
     const int ScreenHeight = 300;
-    int FrameRate = 12;
+    int FrameRate = 60;
     
     
     InitWindow(ScreenWidth, ScreenHeight, "Moving Player");

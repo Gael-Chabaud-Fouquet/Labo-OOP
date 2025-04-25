@@ -72,7 +72,7 @@ defer:
     return result;
 }
 //les choix sont: Labo3_Maison, Breakout, Labo3_DVD, Labo3_MovingPlayer,
-#define LAB_NAME "Labo3_DVD" //ausi modifier la ligne 95 en mettant le meme nom que le cpp ici
+#define LAB_NAME "Labo3_MovingPlayer" //ausi modifier la ligne 95 en mettant le meme nom que le cpp ici
 bool build_game(void)
 {
     bool result = true;
@@ -93,9 +93,9 @@ bool build_game(void)
     knob_cmd_append(&cmd,knob_temp_sprintf("./src/%s.cpp",LAB_NAME),"-o","./Deployment/game.exe");
     knob_cmd_append(&cmd, "-lkernel32","-lwinmm", "-lgdi32","-lopengl32");
     //knob_cmd_append(&cmd,"./src/Breakout.cpp"); //modifer cette ligne sinon les labs ne marchents pas
-    knob_cmd_append(&cmd,"./src/Labo3_DVD.cpp");
+    //knob_cmd_append(&cmd,"./src/Labo3_DVD.cpp");
     //knob_cmd_append(&cmd,"./src/Labo3_Maison.cpp");
-    //knob_cmd_append(&cmd,"./src/Labo3_MovingPlayer.cpp");
+    knob_cmd_append(&cmd,"./src/Labo3_MovingPlayer.cpp");
     if (!knob_cmd_run_sync(cmd)) knob_return_defer(false);
     
 defer:
