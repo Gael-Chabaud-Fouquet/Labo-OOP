@@ -50,6 +50,8 @@ class Ball
     Ball(int StartX, int StartY);
     void MoveBall();
     void Draw();
+
+    Rectangle GetRect();
     Brick GetBrick();
     Paddle GetPaddle();
 };
