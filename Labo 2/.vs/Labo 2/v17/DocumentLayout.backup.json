@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carib\\Downloads\\Labos-OOP\\Labo 2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{82D20C0D-975E-46E7-8651-E16E82266826}|Labo 2.vcxproj|C:\\Users\\carib\\Downloads\\Labos-OOP\\Labo 2\\Labo 2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{82D20C0D-975E-46E7-8651-E16E82266826}|Labo 2.vcxproj|solutionrelative:Labo 2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Labo 2.cpp",
+              "DocumentMoniker": "C:\\Users\\carib\\Downloads\\Labos-OOP\\Labo 2\\Labo 2.cpp",
+              "RelativeDocumentMoniker": "Labo 2.cpp",
+              "ToolTip": "C:\\Users\\carib\\Downloads\\Labos-OOP\\Labo 2\\Labo 2.cpp*",
+              "RelativeToolTip": "Labo 2.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-15T16:38:03.493Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

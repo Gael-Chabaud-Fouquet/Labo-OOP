@@ -22,16 +22,16 @@ void DVDCube::Move() {
 
 int main(void) {
     Color BackgroundColor = {255, 255, 255, 255};
-
+    
     const int ScreenWidth = 1000;
     const int ScreenHeight = 600;
     int FrameRate = 120;
 
     InitWindow(ScreenWidth, ScreenHeight, "DVD Cube");
     SetTargetFPS(FrameRate);
-
+    
     DVDCube dvd(50, 50);
-
+    
     while (!WindowShouldClose()) {
         BeginDrawing();
         dvd.Move();

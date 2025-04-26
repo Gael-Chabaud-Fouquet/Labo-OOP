@@ -17,15 +17,15 @@
 
 class DVDCube {
     private:
-        int PosX;
-        int PosY;
-        int Width;
-        int Height;
-        int VelocityX;
-        int VelocityY;
-        Color DVDColor;
-        public:
-        DVDCube(int StartX, int StartY);
-        void Move();
-        void Draw();
-    };
+    int PosX;
+    int PosY;
+    int Width;
+    int Height;
+    int VelocityX;
+    int VelocityY;
+    Color DVDColor;
+    public:
+    DVDCube(int StartX, int StartY);
+    void Move();
+    void Draw();
+};
