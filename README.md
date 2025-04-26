@@ -13,3 +13,5 @@ emplacement-du-repo-sur-le-pc\Labo-OOP\raylibbetter
 
 À partir de la fenetre 1: c'est l'emplacement principal des labos
 À partir de la fenetre 2: c'est pour pouvoir exécuter les labos avec raylib
+
+Maintenant que j'ai remis les lbs raylib, il n'est plus necessaire de le faire, j'ai verifié que les labos marchaient, mais pour tester à partir du code, il faut modifier les lignes demandé dans le README.md de raylibbetter

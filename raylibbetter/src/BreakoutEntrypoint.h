@@ -1,5 +1,6 @@
 #pragma once
 #include <raylib.h>
+#include <vector>
 
 class Paddle
 {
@@ -12,6 +13,10 @@ class Paddle
     Color PaddleColor;
 
     public:
+    int FindPaddlePosX() const {return PosX;}
+    int FindPaddlePosY() const {return PosY;}
+    int FindPaddleHeight() const {return Height;}
+    int FindPaddleWidth() const {return Width;}
     Paddle(int StartX, int StartY);
     void Draw();
     void MovePaddle();
@@ -25,14 +30,21 @@ class Brick
     int Width;
     int Height;
     Color BrickColor;
-    bool IsAlive;
+    Color DeadBrickColor;
+    bool LifeStatus;
 
     public:
     Brick();
     Brick(int StartX, int StartY, bool AliveOrNot);
     ~Brick();
     void Draw();
-    void CheckIfAlive(bool IsAlive);
+    int FindBrickPosX() const {return PosX;}
+    int FindBrickPosY() const {return PosY;}
+    int FindBrickHeight() const {return Height;}
+    int FindBrickWidth() const {return Width;}
+    //yes those two functions where added to kill/spawn the bricks at the start of the game
+    bool CheckIfAlive() {return LifeStatus;}; //true is alive, false is dead (i think)
+    void SetLifeStatus(bool AliveOrNot) {LifeStatus = AliveOrNot;}
 };
 
 class Ball
@@ -48,14 +60,6 @@ class Ball
 
     public:
     Ball(int StartX, int StartY);
-    void MoveBall();
-    void Draw();
-
-    Rectangle GetRect();
-    Brick GetBrick();
-    Paddle GetPaddle();
+    void MoveBall(Paddle& paddle, std::vector<Brick> bricks);
+    void Draw();;
 };
-
-
-// class GameObject {
-// }
